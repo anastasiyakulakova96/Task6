@@ -11,11 +11,11 @@ namespace Task6._1
         static void Main(string[] args)
         {
             FileWorker fw = new FileWorker();
-            Controller controller = new Controller();
+            Controller controller = new Controller(fw);
 
             fw.WritePathToFile();
             controller.CheckNotEmptyFile();
-            fw.ShowFirstLetters();
+            fw.ShowFirstLetters(); //строк
             controller.CheckNotFoundLines();
 
             Logger.GetLogger().Close();

@@ -9,7 +9,12 @@ namespace Task6._1
     class Controller
     {
         private Logger logger = Logger.GetLogger();
-        FileWorker fw = new FileWorker();
+        FileWorker fw;
+
+        public Controller(FileWorker fw)
+        {
+            this.fw = fw;
+        }
 
         public void CheckNotEmptyFile()
         {

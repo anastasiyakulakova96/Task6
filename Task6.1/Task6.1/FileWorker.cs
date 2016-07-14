@@ -22,7 +22,7 @@ namespace Task6._1
                 Console.WriteLine(@"Please enter path to file. For example: d:\file.txt");
                 path = Console.ReadLine();
             }
-            while (!CheekPath() == true);
+            while (!CheekPath() == true);//чееек
            // return path;
         }
 
