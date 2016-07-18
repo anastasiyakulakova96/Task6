@@ -10,8 +10,7 @@ namespace Task6._1
     class FileWorker
     {
         string path;
-        string[] allFile;
-        IEnumerable<string> lines;
+              IEnumerable<string> lines;
         public List<string> listFirstLetters;
 
 
@@ -22,11 +21,11 @@ namespace Task6._1
                 Console.WriteLine(@"Please enter path to file. For example: d:\file.txt");
                 path = Console.ReadLine();
             }
-            while (!CheekPath() == true);//чееек
-           // return path;
+            while (!CheckPath());
+          
         }
 
-        public bool CheekPath()
+        public bool CheckPath()
         {
             if (File.Exists(path))
             {
@@ -38,9 +37,8 @@ namespace Task6._1
         public void ReadFile()
         {
             lines = File.ReadLines(path);
-            allFile = File.ReadAllLines(path);
 
-            if (allFile.Length == 0)
+            if (lines.Count() == 0)
             {
                 throw new EmptyFileException();
             }

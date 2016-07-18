@@ -13,7 +13,7 @@ namespace Task6._1
             FileWorker fw = new FileWorker();
             Controller controller = new Controller(fw);
 
-            fw.WritePathToFile();
+            fw.WritePathToFile(); // to
             controller.CheckNotEmptyFile();
             fw.ShowFirstLetters(); //строк
             controller.CheckNotFoundLines();
